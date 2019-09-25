@@ -1,11 +1,8 @@
-package com.zainco.task.data.api
+package com.zainco.task.data.repository
 
 import com.zainco.task.domain.entities.AdviceEntity
 import io.reactivex.Flowable
-import retrofit2.http.GET
 
-interface OrganizationRemoteApi {
-    @GET("fortune")
+interface AdviceRemoteDatasource {
     fun getAdvice(): Flowable<AdviceEntity>
-
 }

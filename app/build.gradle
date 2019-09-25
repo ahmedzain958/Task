@@ -11,10 +11,13 @@ android {
         applicationId "com.zainco.task"
         minSdkVersion 18
         targetSdkVersion 29
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        buildConfigField "String", "BASE_LIVE_URL", BASE_LIVE_URL
+
     }
     buildTypes {
         release {
@@ -55,6 +58,7 @@ dependencies {
     implementation appDependencies.rxBinding
     implementation appDependencies.constraintlayout
     implementation appDependencies.cardView
+    implementation appDependencies.multidex
 
 
     testImplementation appTestDependencies.junit

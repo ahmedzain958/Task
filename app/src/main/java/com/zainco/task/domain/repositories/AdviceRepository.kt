@@ -5,5 +5,4 @@ import io.reactivex.Flowable
 
 interface AdviceRepository {
     fun getAdvice(): Flowable<AdviceEntity>
-
 }

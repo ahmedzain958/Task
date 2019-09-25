@@ -78,7 +78,7 @@ ext {
             lifecycle          : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
             koinCore           : "org.koin:koin-core:${koin}",
             koinTest           : "org.koin:koin-test:${koin}",
-            koinAndroid        : "org.koin:koin-android:${koin}",
+            koinAndroid        : "org.koin:koin-android-viewmodel:${koin}",
             koinAndroidx       : "org.koin:koin-androidx-scope:${koin}",
             koinJava           : "org.koin:koin-java:${koin}",
             multidex           : "androidx.multidex:multidex:${multidex}",
