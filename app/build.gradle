@@ -26,11 +26,38 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    def appDependencies = rootProject.ext.appDependencies
+    def appTestDependencies = rootProject.ext.appTestDependencies
+    implementation appDependencies.supportLibrary13
+    implementation appDependencies.supportLibrary4
+    implementation appDependencies.appCompatV7
+    implementation appDependencies.supportRecyclerView
+    implementation appDependencies.supportDesign
+    implementation appDependencies.javaxAnnotation
+    implementation appDependencies.kotlin
+    implementation appDependencies.javaxInject
+    implementation appDependencies.rxKotlin
+    implementation appDependencies.archRuntime
+    implementation appDependencies.okHttp
+    implementation appDependencies.okHttpLogger
+    implementation appDependencies.gson
+    implementation appDependencies.rxAndroid
+    implementation appDependencies.androidAnnotations
+    implementation appDependencies.retrofit
+    implementation appDependencies.retrofitConverter
+    implementation appDependencies.retrofitAdapter
+    implementation appDependencies.archExtensions
+    implementation appDependencies.koinCore
+    implementation appDependencies.koinTest
+    implementation appDependencies.koinAndroid
+    implementation appDependencies.koinAndroidx
+    implementation appDependencies.koinJava
+    implementation appDependencies.rxBinding
+    implementation appDependencies.constraintlayout
+    implementation appDependencies.cardView
+
+
+    testImplementation appTestDependencies.junit
+    testImplementation appTestDependencies.mockito
+    testImplementation appTestDependencies.assertj
 }

@@ -1,7 +1,8 @@
-package com.zainco.task
+package com.zainco.task.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.zainco.task.R
 
 class MainActivity : AppCompatActivity() {
 
