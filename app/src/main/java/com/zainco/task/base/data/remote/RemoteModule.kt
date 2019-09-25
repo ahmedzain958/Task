@@ -14,18 +14,15 @@ import java.util.concurrent.TimeUnit
 @JvmField
 val remoteModule = module {
     single { HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY) }
-
-    single { ErrorMappingInterceptor(get(), get()) }
-
+    //todo: ErrorMappingInterceptor  will be used when u have a format error response
+//    single { ErrorMappingInterceptor(get(), get()) }
     single<OkHttpClient> {
         val builder: OkHttpClient.Builder =
             OkHttpClient.Builder().hostnameVerifier { _, _ -> true }
         builder
-            .addInterceptor(get<ErrorMappingInterceptor>())
             .connectTimeout(RemoteConstants.CONNECT_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(RemoteConstants.READ_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(RemoteConstants.WRITE_TIMEOUT, TimeUnit.SECONDS)
-
         if (BuildConfig.DEBUG) {
             builder.addInterceptor(get<HttpLoggingInterceptor>())
         }

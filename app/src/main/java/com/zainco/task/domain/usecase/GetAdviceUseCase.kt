@@ -7,7 +7,7 @@ import com.zainco.task.domain.repositories.AdviceRepository
 import io.reactivex.Flowable
 
 class GetAdviceUseCase(
-    private val transformer: FlowableRxTransformer<AdviceEntity>,
+    transformer: FlowableRxTransformer<AdviceEntity>,
     private val repositories: AdviceRepository
 ) : BaseFlowableUseCase<AdviceEntity>(transformer) {
 

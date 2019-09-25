@@ -1,4 +1,4 @@
-package com.hogroup.uctd.base.data.resources
+package com.zainco.task.base.data.resources
 
 import android.app.Application
 

@@ -10,5 +10,4 @@ class AsyncFlowableTransformer<T> : FlowableRxTransformer<T>() {
     override fun apply(upstream: Flowable<T>): Publisher<T> {
         return upstream.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
     }
-
 }
