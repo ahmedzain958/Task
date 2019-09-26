@@ -25,3 +25,4 @@ for example)
 - Using resources for dimens and styles
 - Code should be more documented
 - Removing unused code like countdowntimer (only used to log 10 seconds to measure time taken for every api call to get the advice)
+- UI Testing and test cases
