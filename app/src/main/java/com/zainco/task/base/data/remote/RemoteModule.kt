@@ -32,7 +32,8 @@ val remoteModule = module {
 
     single<Retrofit> {
         Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_LIVE_URL)
+                //todo: uncomment this line to let the code use the base url
+//            .baseUrl(BuildConfig.BASE_LIVE_URL)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(get()))
             .client(get())

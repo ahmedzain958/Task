@@ -1,5 +1,4 @@
 ext {
     endpoints = [
-            BASE_LIVE_URL = "\"https://api.acme.international/\"",
     ]
 }
