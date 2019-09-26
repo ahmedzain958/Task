@@ -21,6 +21,7 @@ class AdviceFragment : Fragment() {
 
     companion object {
         val FRAGMENT_NAME = AdviceFragment::class.java.name
+        val TAG = "millisUntilFinished"
         @JvmStatic
         fun newInstance() =
             AdviceFragment().apply {
@@ -31,12 +32,13 @@ class AdviceFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         adviceViewModel.fetchAdvice()
+        //I used this counter only for logging a counter in order no to
         val timer = object : CountDownTimer(10000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                Log.d("millisUntilFinished", (millisUntilFinished / 1000).toString())
+                Log.d(TAG, (millisUntilFinished / 1000).toString())
             }
             override fun onFinish() {
-                Log.d("millisUntilFinished", "finished")
+                Log.d(TAG, "finished")
             }
         }
         timer.start()

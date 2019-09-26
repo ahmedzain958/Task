@@ -62,7 +62,6 @@ dependencies {
     implementation appDependencies.cardView
     implementation appDependencies.multidex
 
-
     testImplementation appTestDependencies.junit
     testImplementation appTestDependencies.mockito
     testImplementation appTestDependencies.assertj
